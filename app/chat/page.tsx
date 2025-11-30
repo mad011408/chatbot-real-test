@@ -29,14 +29,14 @@ export default function ChatPage() {
     saveToHistory,
   } = useChatStore();
 
-  const { providers, getProvider } = useCustomProvidersStore();
+  const { providers } = useCustomProvidersStore();
 
   // Initialize first tab if none exists
   useEffect(() => {
     if (tabs.length === 0) {
       addTab(DEFAULT_MODEL_ID);
     }
-  }, []);
+  }, [tabs.length, addTab]);
 
   const activeTab = tabs.find((tab) => tab.id === activeTabId);
 
@@ -90,7 +90,7 @@ export default function ChatPage() {
     if (activeTab) {
       setMessages(activeTab.messages);
     }
-  }, [activeTabId]);
+  }, [activeTab, activeTabId, setMessages]);
 
   if (!activeTab) {
     return <div>Loading...</div>;

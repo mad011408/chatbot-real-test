@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/select";
 import { LLMModel } from "@/lib/models/llm-list";
 
-interface ExtendedLLMModel extends LLMModel {
+interface ExtendedLLMModel extends Omit<LLMModel, 'provider'> {
   provider?: string;
 }
 

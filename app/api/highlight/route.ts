@@ -64,10 +64,7 @@ export async function POST(req: NextRequest) {
     try {
       const html = await codeToHtml(code, {
         lang: language,
-        theme: {
-          light: "github-light",
-          dark: "github-dark",
-        },
+        theme: "github-dark",
       });
 
       return NextResponse.json({ html });

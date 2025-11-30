@@ -106,7 +106,7 @@ export function CustomProvidersList() {
         {providers.length === 0 && (
           <Card>
             <CardContent className="py-8 text-center text-muted-foreground">
-              No custom providers yet. Click "Add Provider" to create one.
+              No custom providers yet. Click &quot;Add Provider&quot; to create one.
             </CardContent>
           </Card>
         )}
