@@ -1,0 +1,504 @@
+├── .cursor
+    └── rules
+    │   └── convex_rules.mdc
+├── .env.local.example
+├── .eslintrc.json
+├── .github
+    └── ISSUE_TEMPLATE
+    │   ├── 1_bug_report.yml
+    │   └── 2_feature_proposal.yml
+├── .gitignore
+├── .husky
+    ├── commit-msg
+    ├── pre-commit
+    └── pre-push
+├── .nvmrc
+├── CONTRIBUTING.md
+├── README.md
+├── app
+    ├── ConvexClientProvider.tsx
+    ├── api
+    │   ├── chat
+    │   │   ├── route.ts
+    │   │   ├── schema.ts
+    │   │   └── transcriptions
+    │   │   │   └── route.ts
+    │   ├── retrieval
+    │   │   └── process
+    │   │   │   ├── docx
+    │   │   │       └── route.ts
+    │   │   │   └── route.ts
+    │   ├── stripe
+    │   │   ├── restore
+    │   │   │   └── route.ts
+    │   │   └── webhook
+    │   │   │   └── route.ts
+    │   └── subscription
+    │   │   └── send-invite
+    │   │       └── route.ts
+    ├── auth
+    │   └── callback
+    │   │   └── route.ts
+    ├── c
+    │   ├── [chatid]
+    │   │   ├── layout.tsx
+    │   │   └── page.tsx
+    │   ├── layout.tsx
+    │   └── page.tsx
+    ├── chat
+    │   └── page.tsx
+    ├── global-alert-dialog.tsx
+    ├── globals.css
+    ├── layout.tsx
+    ├── loading.tsx
+    ├── login
+    │   ├── form.tsx
+    │   ├── page.tsx
+    │   ├── password
+    │   │   └── page.tsx
+    │   └── verify
+    │   │   ├── mfa-verification.tsx
+    │   │   └── page.tsx
+    ├── page.tsx
+    ├── posthog.js
+    ├── privacy-policy
+    │   └── page.tsx
+    ├── providers.tsx
+    ├── setup
+    │   └── page.tsx
+    ├── signup
+    │   ├── form.tsx
+    │   └── page.tsx
+    ├── terms
+    │   └── page.tsx
+    └── upgrade
+    │   └── page.tsx
+├── biome.jsonc
+├── commitlint.config.js
+├── components.json
+├── components
+    ├── chat
+    │   ├── chat-continue-button.tsx
+    │   ├── chat-file-item.tsx
+    │   ├── chat-files-display.tsx
+    │   ├── chat-help.tsx
+    │   ├── chat-helpers
+    │   │   ├── create-messages.ts
+    │   │   ├── create-temp-messages.ts
+    │   │   ├── drag.ts
+    │   │   ├── file-constants.ts
+    │   │   ├── file-upload.ts
+    │   │   ├── index.ts
+    │   │   ├── stream-processor.ts
+    │   │   └── validation.ts
+    │   ├── chat-hooks
+    │   │   ├── retrieval-logic.tsx
+    │   │   ├── use-agent-sidebar.tsx
+    │   │   ├── use-chat-handler.tsx
+    │   │   ├── use-key-handler.tsx
+    │   │   ├── use-message-handler.tsx
+    │   │   ├── use-prompt-and-command.tsx
+    │   │   ├── use-scroll.tsx
+    │   │   ├── use-select-file-handler.tsx
+    │   │   └── use-voice-recorder.ts
+    │   ├── chat-input.tsx
+    │   ├── chat-messages.tsx
+    │   ├── chat-mic-button.tsx
+    │   ├── chat-plugin-info.tsx
+    │   ├── chat-rate-limit-warning.tsx
+    │   ├── chat-retrieval-settings.tsx
+    │   ├── chat-scroll-buttons.tsx
+    │   ├── chat-search-popup.tsx
+    │   ├── chat-secondary-buttons.tsx
+    │   ├── chat-send-button.tsx
+    │   ├── chat-settings.tsx
+    │   ├── chat-share-button.tsx
+    │   ├── chat-starters.tsx
+    │   ├── chat-tools
+    │   │   ├── tool-options.tsx
+    │   │   ├── tools-dropdown.tsx
+    │   │   └── upgrade-modal.tsx
+    │   ├── chat-ui.tsx
+    │   ├── dialog-portal.tsx
+    │   ├── global-delete-chat-dialog.tsx
+    │   ├── keyboard-shortcuts-popup.tsx
+    │   ├── shared-message.tsx
+    │   ├── temporary-chat-info.tsx
+    │   └── temporary-chat-toggle.tsx
+    ├── icons
+    │   ├── google-icon.tsx
+    │   ├── microsoft-icon.tsx
+    │   ├── pentestgpt-svg.tsx
+    │   └── pentestgpt-text-svg.tsx
+    ├── image
+    │   └── image-with-preview.tsx
+    ├── messages
+    │   ├── CodeHighlight.tsx
+    │   ├── agent-status.tsx
+    │   ├── citation-display.tsx
+    │   ├── files-modal.tsx
+    │   ├── loading-states.tsx
+    │   ├── message-actions.tsx
+    │   ├── message-attachments.tsx
+    │   ├── message-citations.tsx
+    │   ├── message-codeblock.tsx
+    │   ├── message-content-renderer.tsx
+    │   ├── message-detailed-feedback.tsx
+    │   ├── message-images.tsx
+    │   ├── message-markdown.tsx
+    │   ├── message-quick-feedback.tsx
+    │   ├── message-status.tsx
+    │   ├── message-type-solver.tsx
+    │   ├── message.tsx
+    │   ├── reasoning-markdown.tsx
+    │   └── terminal-messages
+    │   │   ├── agent-sidebar.tsx
+    │   │   ├── ask-terminal-command-block.tsx
+    │   │   ├── content-parser.ts
+    │   │   ├── file-content-block.tsx
+    │   │   ├── info-search-web-block.tsx
+    │   │   ├── message-terminal-block.tsx
+    │   │   ├── shell-wait-block.tsx
+    │   │   ├── show-more-button.tsx
+    │   │   ├── terminal-block.tsx
+    │   │   ├── types.ts
+    │   │   └── use-auto-run-preference.ts
+    ├── models
+    │   └── model-select.tsx
+    ├── sidebar
+    │   ├── items
+    │   │   └── chat
+    │   │   │   ├── chat-item.tsx
+    │   │   │   ├── delete-chat.tsx
+    │   │   │   └── update-chat.tsx
+    │   ├── sidebar-content.tsx
+    │   ├── sidebar-create-buttons.tsx
+    │   ├── sidebar-data-list.tsx
+    │   ├── sidebar-header.tsx
+    │   ├── sidebar-invite-button.tsx
+    │   ├── sidebar-switch-item.tsx
+    │   ├── sidebar-switcher.tsx
+    │   ├── sidebar-upgrade.tsx
+    │   └── sidebar.tsx
+    ├── ui
+    │   ├── accordion.tsx
+    │   ├── agent-codeblock.tsx
+    │   ├── alert-dialog.tsx
+    │   ├── alert.tsx
+    │   ├── aspect-ratio.tsx
+    │   ├── avatar.tsx
+    │   ├── badge.tsx
+    │   ├── brand.tsx
+    │   ├── breadcrumb.tsx
+    │   ├── button.tsx
+    │   ├── card.tsx
+    │   ├── carousel.tsx
+    │   ├── checkbox.tsx
+    │   ├── code-action-buttons.tsx
+    │   ├── collapsible.tsx
+    │   ├── command.tsx
+    │   ├── context-menu.tsx
+    │   ├── copy-button.tsx
+    │   ├── dashboard.tsx
+    │   ├── dialog.tsx
+    │   ├── drawer.tsx
+    │   ├── dropdown-menu.tsx
+    │   ├── file-icon.tsx
+    │   ├── file-preview.tsx
+    │   ├── hover-card.tsx
+    │   ├── input-otp.tsx
+    │   ├── input.tsx
+    │   ├── label.tsx
+    │   ├── limit-display.tsx
+    │   ├── menubar.tsx
+    │   ├── navigation-menu.tsx
+    │   ├── pagination.tsx
+    │   ├── password-input.tsx
+    │   ├── popover.tsx
+    │   ├── profile-button.tsx
+    │   ├── progress.tsx
+    │   ├── radio-group.tsx
+    │   ├── screen-loader.tsx
+    │   ├── scroll-area.tsx
+    │   ├── select.tsx
+    │   ├── separator.tsx
+    │   ├── sheet.tsx
+    │   ├── skeleton.tsx
+    │   ├── slider.tsx
+    │   ├── sonner.tsx
+    │   ├── switch-model.tsx
+    │   ├── switch.tsx
+    │   ├── table.tsx
+    │   ├── tabs.tsx
+    │   ├── textarea-autosize.tsx
+    │   ├── textarea.tsx
+    │   ├── toggle-group.tsx
+    │   ├── toggle.tsx
+    │   ├── tooltip.tsx
+    │   ├── transitioned-dialog.tsx
+    │   ├── voice-status-bar.tsx
+    │   └── with-tooltip.tsx
+    └── utility
+    │   ├── accept-invitation-dialog.tsx
+    │   ├── alerts.tsx
+    │   ├── change-password.tsx
+    │   ├── delete-all-chats-dialog.tsx
+    │   ├── deprecation-popup.tsx
+    │   ├── global-state.tsx
+    │   ├── invite-members-dialog.tsx
+    │   ├── mfa
+    │       ├── mfa-disable-modal.tsx
+    │       ├── mfa-enable-modal.tsx
+    │       ├── mutil-step-deletion.tsx
+    │       └── use-mfa.tsx
+    │   ├── profile-tabs
+    │       ├── data-controls-tab.tsx
+    │       ├── general-tab.tsx
+    │       ├── personalization-tab.tsx
+    │       ├── security-tab.tsx
+    │       ├── shared-chats-popup.tsx
+    │       ├── subscription-tab.tsx
+    │       └── team-tab.tsx
+    │   ├── providers.tsx
+    │   ├── remove-team-member-dialog.tsx
+    │   ├── settings.tsx
+    │   ├── theme-switcher.tsx
+    │   ├── ui-state.tsx
+    │   └── upgrade-plan.tsx
+├── context
+    ├── alert-context.tsx
+    ├── context.tsx
+    └── ui-context.tsx
+├── convex
+    ├── README.md
+    ├── _generated
+    │   ├── api.d.ts
+    │   ├── api.js
+    │   ├── dataModel.d.ts
+    │   ├── server.d.ts
+    │   └── server.js
+    ├── chatHistoryHttp.ts
+    ├── chats.ts
+    ├── chatsHttp.ts
+    ├── crons.ts
+    ├── feedback.ts
+    ├── feedbackHttp.ts
+    ├── fileStorage.ts
+    ├── fileStorageHttp.ts
+    ├── file_items.ts
+    ├── files.ts
+    ├── http.ts
+    ├── httpUtils.ts
+    ├── invitations.ts
+    ├── messages.ts
+    ├── messagesHttp.ts
+    ├── profileDeletion.ts
+    ├── profiles.ts
+    ├── profilesHttp.ts
+    ├── sandboxes.ts
+    ├── schema.ts
+    ├── subscriptionAnalysis.ts
+    ├── subscriptions.ts
+    ├── subscriptionsHttp.ts
+    ├── teams.ts
+    ├── teamsHttp.ts
+    └── tsconfig.json
+├── db
+    ├── chat-files.ts
+    ├── chat-history.ts
+    ├── chats.ts
+    ├── feedback.ts
+    ├── files.ts
+    ├── index.ts
+    ├── limits.ts
+    ├── message-file-items.ts
+    ├── messages.ts
+    ├── profiles.ts
+    ├── storage
+    │   ├── admin-files.ts
+    │   ├── files.ts
+    │   └── message-images.ts
+    ├── subscriptions.ts
+    └── teams.ts
+├── e2e
+    └── tests
+    │   ├── .env.test.example
+    │   └── auth.spec.ts
+├── jest.config.ts
+├── lib
+    ├── ai-helper.ts
+    ├── ai
+    │   ├── actions.ts
+    │   ├── actions
+    │   │   ├── chat-actions.ts
+    │   │   ├── chat-validation.ts
+    │   │   └── message-actions.ts
+    │   ├── image-processing.ts
+    │   ├── message-utils.ts
+    │   ├── pentest-files.ts
+    │   ├── prompts.ts
+    │   ├── providers.ts
+    │   ├── terminal-utils.ts
+    │   ├── tool-selection.ts
+    │   └── tools
+    │   │   ├── agent
+    │   │       ├── terminal-command-executor.ts
+    │   │       ├── terminal-executor.ts
+    │   │       ├── types.ts
+    │   │       └── utils
+    │   │       │   ├── file-db-utils.ts
+    │   │       │   ├── sandbox-manager.ts
+    │   │       │   ├── sandbox-utils.ts
+    │   │       │   └── sandbox.ts
+    │   │   ├── get_terminal_files-tool.ts
+    │   │   ├── run_terminal_cmd-tool.ts
+    │   │   ├── toolSchemas.ts
+    │   │   └── web.ts
+    ├── api
+    │   └── convex.ts
+    ├── available-tools.ts
+    ├── blob-to-b64.ts
+    ├── build-prompt-backend.ts
+    ├── build-prompt.ts
+    ├── consume-stream.ts
+    ├── errors.ts
+    ├── hooks
+    │   ├── use-copy-to-clipboard.tsx
+    │   ├── use-hotkey.tsx
+    │   └── use-local-storage-state.ts
+    ├── models
+    │   ├── agent-prompts.ts
+    │   ├── api-error.ts
+    │   ├── deepresearch-prompt.ts
+    │   ├── llm-list.ts
+    │   └── llm-prompting.ts
+    ├── result.ts
+    ├── retrieval
+    │   └── processing
+    │   │   ├── convert.ts
+    │   │   ├── csv.ts
+    │   │   ├── docx.ts
+    │   │   ├── index.ts
+    │   │   ├── json.ts
+    │   │   ├── md.ts
+    │   │   ├── pdf.ts
+    │   │   └── txt.ts
+    ├── sentinel.ts
+    ├── server
+    │   ├── check-auth-ratelimit.ts
+    │   ├── moderation.ts
+    │   ├── ratelimiter.ts
+    │   ├── redis.ts
+    │   ├── server-chat-helpers.ts
+    │   ├── server-utils.ts
+    │   ├── stripe-url.ts
+    │   ├── stripe.ts
+    │   └── subscription-utils.ts
+    ├── shiki
+    │   └── shared.ts
+    ├── supabase
+    │   ├── browser-client.ts
+    │   ├── client.ts
+    │   ├── middleware.ts
+    │   └── server.ts
+    ├── team-utils.ts
+    ├── utils.test.ts
+    ├── utils.ts
+    └── utils
+    │   ├── export-chat-history.ts
+    │   ├── safe-wait-until.ts
+    │   └── type-converters.ts
+├── license
+├── middleware.ts
+├── next.config.ts
+├── package.json
+├── playwright.config.ts
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── prettier.config.cjs
+├── public
+    ├── apple-touch-icon.png
+    ├── favicon.ico
+    ├── icon-192x192.png
+    ├── icon-256x256.png
+    ├── icon-512x512.png
+    ├── locales
+    │   ├── de
+    │   │   └── translation.json
+    │   └── en
+    │   │   └── translation.json
+    └── manifest.json
+├── supabase
+    ├── .gitignore
+    ├── config.toml
+    ├── functions
+    │   └── _shared
+    │   │   └── cors.ts
+    ├── migrations
+    │   ├── 20240108234540_setup.sql
+    │   ├── 20240108234541_add_profiles.sql
+    │   ├── 20240108234542_add_workspaces.sql
+    │   ├── 20240108234544_add_files.sql
+    │   ├── 20240108234545_add_file_items.sql
+    │   ├── 20240108234548_add_chats.sql
+    │   ├── 20240108234549_add_messages.sql
+    │   ├── 20240125192042_upgrade_openai_models.sql
+    │   ├── 20240131140938_add_stripe_tables.sql
+    │   ├── 20240319095700_add_finish_reason_to_chat.sql
+    │   ├── 20240418235300_create_feedback_table.sql
+    │   ├── 20240420225900_change_feedback_to_keep_deleted_messages.sql
+    │   ├── 20240425022300_add_plugin_to_messages.sql
+    │   ├── 20240430131658_remote_schema.sql
+    │   ├── 20240618153844_add_voice_assistant_events.sql
+    │   ├── 20240622132758_remove_columns_from_profiles.sql
+    │   ├── 20240623213350_remove_models_tables_and_fields.sql
+    │   ├── 20240624185827_remove_prompt_and_temperature_from_chats.sql
+    │   ├── 20240625202323_remove_workspace_instructions.sql
+    │   ├── 20240706053845_add_rag_data_to_message_and_feedback.sql
+    │   ├── 20240707045329_update_feedback_table.sql
+    │   ├── 20240905171856_remove_profile_columns.sql
+    │   ├── 20240905180551_remove_profiles_and_workspaces_columns.sql
+    │   ├── 20240905202529_add_shared_chats.sql
+    │   ├── 20240906203119_remove_folders_and_update_chats.sql
+    │   ├── 20240926130750_fix_access_to_shared_message_images.sql
+    │   ├── 20240929193053_add_plan_type_team_name_quantity_to_subscriptions.sql
+    │   ├── 20241003083828_adding_teams_and_other_security_changes.sql
+    │   ├── 20241101201750_delete_user_function.sql
+    │   ├── 20241102204057_remove_workspace_images.sql
+    │   ├── 20241124141109_add_citations_to_messages.sql
+    │   ├── 20241212091225_add_fragment_to_messages.sql
+    │   ├── 20250106015643_add_mfa_policies.sql
+    │   ├── 20250113165607_update_delete-user-with-mfa.sql
+    │   ├── 20250116182657_add_e2b_sandboxes.sql
+    │   ├── 20250125210351_add_thinking_to_messages.sql
+    │   ├── 20250209000616_update_file_items.sql
+    │   ├── 20250209090845_hardening_shared_chats.sql
+    │   ├── 20250215113707_add_messages_id_and_chat_id_to_files.sql
+    │   ├── 20250219085711_migrate_data.sql
+    │   ├── 20250220093600_drop_chat_and_workspaces_files_table.sql
+    │   ├── 20250223095606_add_sequence_to_file_items.sql
+    │   ├── 20250224092523_add_temp_file_clean_up.sql
+    │   ├── 20250309000339_remove_workspace_id_from_chats.sql
+    │   ├── 20250421085801_local_db_sync_fields.sql
+    │   └── 20250427221032_add_attachments_to_table.sql
+    └── types.ts
+├── tailwind.config.ts
+├── tsconfig.json
+├── types
+    ├── agent.ts
+    ├── chat-message.ts
+    ├── chat.ts
+    ├── content-type.ts
+    ├── file-item-chunk.ts
+    ├── files.ts
+    ├── images
+    │   └── message-image.ts
+    ├── index.ts
+    ├── llms.ts
+    ├── models.ts
+    ├── plugins.ts
+    ├── sharing.ts
+    ├── sidebar-data.ts
+    └── stream.ts
+└── worker
+    └── index.js
